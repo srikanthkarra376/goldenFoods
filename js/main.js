@@ -3,12 +3,15 @@ $(document).ready(function(){
        $(this).fadeIn(200).css('display','none');
       $('#side-menu-div ul').fadeIn(200).css('display','block');
    });
-});
 
-$("#side-menu-div li.close").click(function(){
+     $("#side-menu-div li.close").click(function(){
      $('#side-menu-div ul').fadeIn(500).css('display','none');
      $('#side-menu-div i').fadeIn(200).css('display','block');
+
+   });
 });
+
+
 
 // smooth scrrolling 
 $('a[href*="#"]')
@@ -30,7 +33,7 @@ $('a[href*="#"]')
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1250, function() {
+        }, 800, function() {
         
           var $target = $(target);
           $target.focus();
@@ -48,8 +51,9 @@ $('a[href*="#"]')
 
 
 $(window).scroll(function() {
-   if($(window).scrollTop() + $(window).height() >1200 ) {
-      $('#about p').addClass('animated fadeIn');
+	var height1 = $(window).height();
+   if($(window).scrollTop()+ height1> 800 ) {
+      $('#about p').addClass('animated fadeInDown').delay(1000);
       
    }
 });

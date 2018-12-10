@@ -68,7 +68,7 @@ nav ul li a:hover{
  
   #side-menu-div {
     display: block;
-    top:10%;
+    top:-25%;
     right:5%;
     position: absolute;
     padding:15px;
@@ -77,9 +77,10 @@ nav ul li a:hover{
   }
   #side-menu-div ul {
     display:none;
+    background-color:#ffeb3b96;
     padding-top:-40px;
-    color:rgb(226, 17, 17);
-    background-color:rgba(20, 156, 83, 0.774);
+    color:#ffeb3b;
+    background-color: ;
     height: 80vh;
  }
   #side-menu-div ul li {
@@ -91,23 +92,26 @@ nav ul li a:hover{
   #side-menu-div ul li.close i.fa-times-circle,#side-menu-div ul li.close i.fa-times-circle:hover{
     float: right;
     border: none;
-    color:#fff;
+    color:#ffeb3b;
     font-size:1.5em;
     background-color:none;
   }
   #side-menu-div ul li a {
     text-decoration: none;
-    color: #fff;
+     color:#ffeb3b;
     padding-top:50px;
   }
   #side-menu-div i{
     padding:8px 16px; 
   }
+   #side-menu-div ul li.close:hover {
+    background-color: none;
+   }
   #side-menu-div i:hover {
     padding:8px 30px;
     border:1px solid rgb(224, 220, 220);
     background-color: #F0E68C;
-    color:black;
+    color: #F0E68C;
     transition: 0.4s; 
     padding:8px 16px;
     border-radius: 4%;
