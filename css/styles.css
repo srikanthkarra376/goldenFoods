@@ -14,12 +14,16 @@ body {
 }
 #logo a {
   text-decoration: none;
-  color:#F0E68C;
+  color:#FFEB3B;
   text-transform: uppercase;
   font-size: 1.9em;
+  font-family: 'Lobster Two', cursive;
+  margin-left: 20px;
  
 }
 /* --------------------------Nav Bar---------------------*/
+
+
 nav {
   z-index: 1; 
   position:absolute; 
@@ -59,7 +63,7 @@ nav ul li a:hover{
   display: none;
   border:none;
 }
-/*-------------------media screen NAVMENU-------*/
+/*-------------------media screen NAVMENU----------------*/
 
 @media screen and (max-width: 1280px) {
   nav ul li a {
@@ -98,7 +102,7 @@ nav ul li a:hover{
   }
   #side-menu-div ul li a {
     text-decoration: none;
-     color:#ffeb3b;
+    color:#ffeb3b;
     padding-top:50px;
   }
   #side-menu-div i{
@@ -119,7 +123,8 @@ nav ul li a:hover{
   }
   
 }
-/* ------------------------------showcase----------------------*/
+/* ------------------------showcase----------------------*/
+
 #showcase {
   position: absolute;
   top:0;
@@ -127,27 +132,39 @@ nav ul li a:hover{
   height:100vh;
   width:100%;
   background-attachment: scroll;
-  background:linear-gradient(rgba(0, 0, 0, 0.81),rgba(30, 17, 17, 0.26)),url(../images/showcase4.jpg);
+  background:linear-gradient(rgb(4, 4, 3),rgba(30, 17, 17, 0)),url(../images/hotel.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
-  /*linear-gradient(rgba(0, 0, 0, 0.5),rgba(10, 7, 7, 0.767))*/
-
-
+  font-family: 'Cookie', cursive;
 }
+
+
 #showcase h1 {
 z-index: inherit;
-font-size:58px;
-color:#F0E68C;
+font-size: 4em;
+color:#FFEB3B;
 width:50%;
 text-align: center;
-margin: 25%;
-
+margin: 22.5%;
 }
-/*------------------------------about----------------------------------*/
+
+
+#showcase h1:hover{
+  background-image: url(../images/large.png);
+  z-index: 1;
+  background-size: 400px 250px;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/*------------------------about------------------------------*/
 
 #about {
+
 position: absolute;
 top:100vh;
 width:100%;
@@ -155,9 +172,8 @@ height: 100vh;
 background-color:#20303c; 
 border-left:1px soild #F0E68C;
 text-align:right;
-
-
 }
+
 
 #about p,#about h3 {
   width:60%;
@@ -168,13 +184,26 @@ text-align:right;
   margin:0 auto;
 
 }
+
 #about p {
   line-height: 1.5;
 }
+
 #about h3 {
   text-align: center;
   padding: 30px;
 }
+
+
+#about h3::after {
+  position:absolute; 
+  content: '';
+  margin-top: 40px;
+  margin-left:-100px;
+  width:98px;
+  border-bottom: 1px dotted #F0E68C;
+}
+
 @media screen and (max-width: 900px) {
 
 #about p {

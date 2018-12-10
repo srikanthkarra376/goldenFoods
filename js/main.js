@@ -1,25 +1,25 @@
 $(document).ready(function(){
      $('#side-menu-div i').on('click',function(){
        $(this).fadeIn(200).css('display','none');
-      $('#side-menu-div ul').fadeIn(200).css('display','block');
+      $('#side-menu-div ul').addClass('animated bounceIn').fadeIn(200).css('display','block');
    });
+    
 
-     $("#side-menu-div li.close").click(function(){
-     $('#side-menu-div ul').fadeIn(500).css('display','none');
+     $("#side-menu-div li.close,#side-menu-div ul li a").on('click',function(){
+     $('#side-menu-div ul').addClass('animated bounceOut').css('display','none');
      $('#side-menu-div i').fadeIn(200).css('display','block');
 
+   
    });
 });
 
 
 
-// smooth scrrolling 
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
+// -------------------smooth scrrolling---------------- 
+
+
+$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
       && 
@@ -53,7 +53,7 @@ $('a[href*="#"]')
 $(window).scroll(function() {
 	var height1 = $(window).height();
    if($(window).scrollTop()+ height1> 800 ) {
-      $('#about p').addClass('animated fadeInDown').delay(1000);
+      $('#about p').addClass('animated fadeInRight').delay(1500);
       
    }
 });
