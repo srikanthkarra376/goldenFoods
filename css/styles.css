@@ -141,6 +141,7 @@ text-align: center;
 margin: 25%;
 
 }
+/*------------------------------about----------------------------------*/
 
 #about {
 position: absolute;
@@ -148,18 +149,34 @@ top:100vh;
 width:100%;
 height: 100vh;
 background-color:#20303c; 
+border-left:1px soild #F0E68C;
+text-align:right;
+
 
 }
 
 #about p,#about h3 {
   width:60%;
   color:#F0E68C;
-  padding:50px;
-  font-size: 2em;
+  padding:40px;
+  font-size: 1.6em;
   font-family:almoni-dl-aaa-300,sans-serif;
   margin:0 auto;
+
+}
+#about p {
+  line-height: 1.5;
 }
 #about h3 {
   text-align: center;
   padding: 30px;
 }
+@media screen and (max-width: 900px) {
+
+#about p {
+    font-size: 1.2em;
+    text-align: justify;
+      line-height: 1.3;
+}
+
+  }
