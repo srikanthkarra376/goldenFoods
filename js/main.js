@@ -17,38 +17,6 @@ $(document).ready(function(){
      $('#side-menu-div i.fa-bars').fadeIn(200).css('display','block'); 
     });
   });
-// -------------------smooth scrrolling---------------- 
-
-
-$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
-
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
- 
-      if (target.length) {
-      
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 800, function() {
-        
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { 
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); 
-            $target.focus(); 
-          };
-        });
-      }
-    }
-  });
 
 
 // ABOUT ANIMATION
@@ -62,19 +30,39 @@ $(window).scroll(function() {
    }
 });
 
-// MENU ANIMATION
-$(window).scroll(function() {
-  var height1 = $(window).height();
-   if($(window).scrollTop()+ height1> 1600 ) {
-    var menu = document.getElementsByTagName('img');
-    console.log(menu);
-     for(var i=0;i< menu;i++){
-      console.log(menu[i]);
-       menu[i].animateCss('animated bounce');
-     
-     }
-  
-   }
+
+
+
+
+// -------------------smooth scrrolling---------------- 
+$('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
+
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+    && 
+    location.hostname == this.hostname
+  ) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+    if (target.length) {
+    
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 800, function() {
+      
+        var $target = $(target);
+        $target.focus();
+        if ($target.is(":focus")) { 
+          return false;
+        } else {
+          $target.attr('tabindex','-1'); 
+          $target.focus(); 
+        };
+      });
+    }
+  }
 });
 
 

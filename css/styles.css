@@ -270,7 +270,7 @@ text-align:justify;
       position: absolute;
       top:100vh;
       width:100%;
-      height: 80vh;
+      height: 100vh;
       background-color:#20303c; 
       border-left:1px soild #F0E68C;
       text-align:justify;
@@ -290,10 +290,12 @@ text-align:justify;
 }
 /*------------------------MENU-------------------------*/
 #menu {
+
 position: absolute;
 top:200vh;
 width:100%;
 height: 100vh;
+
 }
 #menu h3 {
   text-align:center;
@@ -307,48 +309,67 @@ height: 100vh;
 }
 
 #menu .grid-container .grid-item {
-
-  padding: 10px;
   text-align: center;
+  height: 300px;
 }
-#menu .grid-container .grid-item img {
+#menu .grid-container .grid-item:hover {
+  background:linear-gradient(rgb(4, 4, 3),rgba(30, 17, 17, 0));
+}
+#menu .grid-container .grid-item img{
   width:100%;
   height:300px;
-
 }
+#menu .grid-container .grid-item img:hover,
+#menu .grid-container .grid-item h1:hover {   
+   color:white;
+   background:linear-gradient(rgb(4, 4, 3),rgba(30, 17, 17, 0));
+   transition: 0.5s;
+}
+
 #menu .grid-container .grid-item h1 {
-  position: relative;
-  font-family:almoni-dl-aaa-300,sans-serif;
-  z-index:1;
-  text-transform: uppercase;
-  color: #e91e63;
-  font-size: 4.5em;
-  opacity: 1;
-   top:-45%;
-   height:auto;
+
+          position: relative;
+          font-family:almoni-dl-aaa-300,sans-serif;
+          z-index:1;
+          text-transform: uppercase;
+          color: #e91e63;
+          font-size: 4.5em;
+          opacity: 1;
+          top: -90%;
+          height:auto;
 
 }
 
 @media screen and (max-width: 900px) {
 
-#menu .grid-container {
-  display: grid;
-  grid-template-columns: auto auto ;
-  }
+        #menu .grid-container {
+          display: grid;
+          grid-template-columns:  50%  50% ;
+          height: calc(100vh -500px);
+          }
+          #menu .grid-container .grid-item img{
+            width:100%;
+          
+          }
 
 }
 @media screen and (max-width: 700px) {
-  #menu {
-    position: absolute;
-    top:200vh;
-    width:100%;
-    height: 50vh;
-    }
-
-
-   #menu .grid-container {
-  display: grid;
-  grid-template-columns: auto;
-  }
+          #menu {
+            position: absolute;
+            top:200vh;
+            width:100%;
+            height: 50vh;
+            }
+          #menu .grid-container {
+          display: grid;
+          grid-template-columns: 100%;
+          height: calc(100vh -500px);
+          }
 
 }
+#location {
+  position: absolute;
+  top:300vh;
+  height: 100vh;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+ }
