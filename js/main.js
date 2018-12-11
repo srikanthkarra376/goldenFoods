@@ -5,16 +5,18 @@ $(document).ready(function(){
    });
     
 
-     $("#side-menu-div li.close,#side-menu-div ul li a").on('click',function(){
-     $('#side-menu-div ul').addClass('animated bounceOut').css('display','none');
-     $('#side-menu-div i').fadeIn(200).css('display','block');
-
-   
-   });
+     $("#side-menu-div li.close").on('click',function(){
+      $('#side-menu-div i.fa-bars').fadeIn(200).css('display','block');
+     $('#side-menu-div ul ').css('display','none');
+    });
 });
-
-
-
+//function to occur when user clicks on anchor tag
+$(document).ready(function(){
+   $("#side-menu-div ul li a").click(function(){
+    $("#side-menu-div ul").css('display','none');
+     $('#side-menu-div i.fa-bars').fadeIn(200).css('display','block'); 
+    });
+  });
 // -------------------smooth scrrolling---------------- 
 
 
@@ -47,7 +49,9 @@ $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function(event) {
       }
     }
   });
-//animate css
+
+
+// ABOUT ANIMATION
 
 
 $(window).scroll(function() {
@@ -57,3 +61,21 @@ $(window).scroll(function() {
       
    }
 });
+
+// MENU ANIMATION
+$(window).scroll(function() {
+  var height1 = $(window).height();
+   if($(window).scrollTop()+ height1> 1600 ) {
+    var menu = document.getElementsByTagName('img');
+    console.log(menu);
+     for(var i=0;i< menu;i++){
+      console.log(menu[i]);
+       menu[i].animateCss('animated bounce');
+     
+     }
+  
+   }
+});
+
+
+
